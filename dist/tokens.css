@@ -1,0 +1,211 @@
+/* ==========================================================================
+   CG Design System — Tokens
+   Fuente única de verdad para colores, tipografía, radios, sombras y motion
+   de los productos de Consultoría Global.
+
+   CSS puro: funciona con cualquier stack (React, Angular, Vue, HTML plano).
+   Para cambiar la identidad de TODOS los productos, se edita solo este archivo.
+   ========================================================================== */
+
+:root {
+  /* ---------- Marca ---------------------------------------------------- */
+
+  /* Primario (teal): todo lo interactivo — botones, links, foco, estado activo */
+  --cg-primary: #006e94;
+  --cg-primary-hover: #006688;
+  --cg-primary-dark: #005577; /* fin de gradientes, texto sobre fondo primario claro */
+  --cg-primary-light: #0088aa; /* bordes de acento, selección en calendarios */
+  --cg-primary-50: #e6f4f8; /* fondo suave (chips, item activo, avatares) */
+  --cg-primary-100: #d6ebf2; /* fondo suave en hover / fin de gradiente claro */
+  --cg-primary-200: #a3c2d1; /* borde de elementos sobre fondo primario suave */
+
+  /* Institucional (azul): navegación principal y acentos corporativos del header */
+  --cg-brand: #0e5a8a;
+  --cg-brand-light: #136a9f; /* inicio del gradiente de la navbar */
+  --cg-brand-dark: #0a4266; /* hover / bordes de la navbar */
+  --cg-brand-darker: #062a45; /* inicio del gradiente de la card hero */
+  --cg-brand-mobile: #3a7ba6; /* fondo del menú mobile desplegado */
+
+  /* ---------- Superficies ---------------------------------------------- */
+  --cg-canvas: #f6f8fb; /* fondo general de la app (body) */
+  --cg-surface: #ffffff; /* cards, modales, inputs, header */
+  --cg-surface-muted: #f9fafb; /* paneles laterales, footer de modal, thead, disabled */
+  --cg-surface-sunken: #f3f4f6; /* hover de filas / ítems neutros, skeletons */
+
+  /* ---------- Texto ---------------------------------------------------- */
+  --cg-ink-strong: #111827; /* números / títulos de máximo énfasis */
+  --cg-ink: #1f2937; /* texto por defecto y títulos */
+  --cg-ink-soft: #374151; /* labels, texto de botones secundarios, párrafos */
+  --cg-ink-muted: #6b7280; /* texto secundario, descripciones */
+  --cg-ink-subtle: #9ca3af; /* placeholders, íconos inactivos, metadatos (no usar para texto que haya que leer) */
+  --cg-ink-inverse: #ffffff; /* texto sobre primario / brand / danger */
+
+  /* ---------- Bordes --------------------------------------------------- */
+  --cg-line: #e5e7eb; /* borde por defecto: cards, inputs, divisores */
+  --cg-line-soft: #f3f4f6; /* divisores internos (filas de tabla, footer de modal) */
+  --cg-line-strong: #d1d5db; /* borde de botón secundario, checkbox */
+
+  /* ---------- Estados semánticos --------------------------------------- */
+  /* Cada estado tiene: sólido (botón/ícono), hover, soft (fondo), line (borde), ink (texto sobre soft) */
+  --cg-danger: #dc2626;
+  --cg-danger-hover: #b91c1c;
+  --cg-danger-soft: #fef2f2;
+  --cg-danger-line: #fecaca;
+  --cg-danger-ink: #b91c1c;
+  --cg-danger-field: #ef4444; /* borde de input con error y asterisco de requerido */
+
+  --cg-success: #059669;
+  --cg-success-hover: #047857;
+  --cg-success-soft: #ecfdf5;
+  --cg-success-line: #a7f3d0;
+  --cg-success-ink: #047857;
+
+  --cg-warning: #f59e0b;
+  --cg-warning-hover: #b45309;
+  --cg-warning-soft: #fffbeb;
+  --cg-warning-line: #fde68a;
+  --cg-warning-ink: #b45309;
+
+  --cg-info: #0284c7;
+  --cg-info-hover: #0369a1;
+  --cg-info-soft: #f0f9ff;
+  --cg-info-line: #bae6fd;
+  --cg-info-ink: #0369a1;
+
+  /* ---------- Acentos decorativos -------------------------------------- */
+  /* Para distinguir categorías (horas extra, tareas de evento, etiquetas): no comunican estado.
+     Cada acento tiene: sólido (punto/ícono), soft (fondo), line (borde), ink (texto sobre soft) */
+  --cg-purple: #a855f7;
+  --cg-purple-soft: #faf5ff;
+  --cg-purple-line: #e9d5ff;
+  --cg-purple-ink: #7e22ce;
+
+  --cg-rose: #f43f5e;
+  --cg-rose-soft: #fff1f2;
+  --cg-rose-line: #fecdd3;
+  --cg-rose-ink: #be123c;
+
+  --cg-orange: #f97316;
+  --cg-orange-soft: #fff7ed;
+  --cg-orange-line: #fed7aa;
+  --cg-orange-ink: #c2410c;
+
+  /* ---------- Overlays ------------------------------------------------- */
+  --cg-overlay: rgb(0 0 0 / 0.5); /* backdrop de modales (con blur de 4px) */
+  --cg-on-dark-hover: rgb(
+    255 255 255 / 0.1
+  ); /* hover de ítems sobre navbar / header de modal */
+  --cg-on-dark-active: rgb(
+    255 255 255 / 0.2
+  ); /* hover de botones secundarios sobre fondo oscuro */
+  --cg-on-dark-line: rgb(
+    255 255 255 / 0.25
+  ); /* borde de botones y badges sobre fondo oscuro */
+
+  /* ---------- Gradientes ----------------------------------------------- */
+  --cg-gradient-primary: linear-gradient(
+    to right,
+    var(--cg-primary),
+    var(--cg-primary-dark)
+  );
+  --cg-gradient-nav: linear-gradient(
+    to bottom,
+    var(--cg-brand-light),
+    var(--cg-brand)
+  );
+  --cg-gradient-hero: linear-gradient(
+    to right,
+    var(--cg-brand-darker),
+    var(--cg-brand-dark)
+  );
+  --cg-gradient-danger: linear-gradient(to right, #dc2626, #991b1b);
+  --cg-gradient-success: linear-gradient(to right, #10b981, #047857);
+  --cg-gradient-warning: linear-gradient(to right, #f59e0b, #b45309);
+
+  /* ---------- Tipografía ----------------------------------------------- */
+  /* Inter (variable, 100–900), incluida en la lib con @fontsource-variable/inter y cargada por
+     CgThemeProvider. El resto es el respaldo de sistema mientras carga. */
+  --cg-font-sans:
+    "Inter Variable", Inter, ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --cg-font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    monospace;
+
+  --cg-text-micro: 0.625rem; /* 10px — badges, overlines, encabezados de tabla (mínimo permitido) */
+  --cg-text-caption: 0.6875rem; /* 11px — mensajes de error, footer, labels de toggle */
+  --cg-text-xs: 0.75rem; /* 12px — labels de formulario, texto secundario */
+  --cg-text-sm: 0.875rem; /* 14px — texto base de la UI, botones, inputs */
+  --cg-text-base: 1rem; /* 16px — títulos de card, texto destacado */
+  --cg-text-lg: 1.125rem; /* 18px — títulos de sección */
+  --cg-text-xl: 1.25rem; /* 20px — títulos de modal y de panel */
+  --cg-text-2xl: 1.5rem; /* 24px — título de página (h1) en mobile */
+  --cg-text-3xl: 1.875rem; /* 30px — título de página (h1) desde tablet */
+
+  --cg-weight-normal: 400;
+  --cg-weight-medium: 500; /* texto con énfasis leve */
+  --cg-weight-semibold: 600; /* botones, navegación, subtítulos */
+  --cg-weight-bold: 700; /* títulos y labels */
+  --cg-weight-black: 900; /* solo cifras grandes (KPIs) */
+
+  --cg-leading-none: 1;
+  --cg-leading-tight: 1.25;
+  --cg-leading-normal: 1.5;
+  --cg-leading-relaxed: 1.625;
+
+  --cg-tracking-tight: -0.025em;
+  --cg-tracking-wider: 0.05em; /* labels y overlines en mayúsculas */
+  --cg-tracking-widest: 0.1em; /* subtítulo de modal, tagline del header */
+
+  /* ---------- Espaciado (base 4px) -------------------------------------- */
+  --cg-space-1: 0.25rem; /* 4 */
+  --cg-space-2: 0.5rem; /* 8  — gap ícono/texto */
+  --cg-space-3: 0.75rem; /* 12 — gap entre botones */
+  --cg-space-4: 1rem; /* 16 — padding compacto, gap de formulario */
+  --cg-space-6: 1.5rem; /* 24 — padding de card / modal */
+  --cg-space-8: 2rem; /* 32 — separación entre bloques de página */
+  --cg-space-12: 3rem; /* 48 — separación con el footer */
+
+  /* ---------- Radios ---------------------------------------------------- */
+  --cg-radius-sm: 0.375rem; /* 6  — chips pequeños, botones de ícono compactos */
+  --cg-radius-button: 1rem; /* 16 — botones */
+  --cg-radius-item: 0.75rem; /* 12 — ítems de menú, alertas */
+  --cg-radius-field: 0.75rem; /* 12 — inputs, selects, textareas */
+  --cg-radius-card: 0.75rem; /* 12 — cards, popovers */
+  --cg-radius-panel: 1rem; /* 16 — modales, paneles destacados */
+  --cg-radius-pill: 9999px; /* badges, avatares, toggles */
+
+  /* ---------- Sombras --------------------------------------------------- */
+  --cg-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* cards en reposo */
+  --cg-shadow-md:
+    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* hover, navbar */
+  --cg-shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* menús */
+  --cg-shadow-xl: 0 25px 50px -12px rgb(0 0 0 / 0.25); /* modales, listas de dropdown */
+  --cg-shadow-primary: 0 2px 10px -3px rgb(0 136 170 / 0.15); /* realce de elemento seleccionado */
+
+  /* ---------- Foco ------------------------------------------------------ */
+  --cg-focus-ring:
+    0 0 0 2px var(--cg-surface), 0 0 0 4px var(--cg-primary); /* botones */
+  --cg-focus-ring-field: 0 0 0 2px rgb(0 119 153 / 0.2); /* inputs */
+  --cg-focus-ring-danger: 0 0 0 2px #fecaca; /* inputs con error */
+
+  /* ---------- Motion ---------------------------------------------------- */
+  --cg-duration-fast: 150ms;
+  --cg-duration: 200ms; /* hover, foco, colores */
+  --cg-duration-slow: 300ms; /* entrada de modales y paneles */
+  --cg-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ---------- Layout ---------------------------------------------------- */
+  --cg-container: 1400px; /* ancho máximo del contenido */
+  --cg-navbar-height: 52px;
+  --cg-sidebar-width: 280px;
+
+  /* ---------- Capas (z-index) ------------------------------------------- */
+  --cg-z-sticky: 10; /* thead y barras sticky dentro del contenido */
+  --cg-z-navbar: 40;
+  --cg-z-modal: 50;
+  --cg-z-popover: 100; /* listas de dropdown (deben ganarle al modal) */
+  --cg-z-toast: 110;
+}

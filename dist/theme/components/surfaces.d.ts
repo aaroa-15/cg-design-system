@@ -1,0 +1,15 @@
+import type { Components, Theme } from "@mui/material/styles";
+export declare const MuiCard: Components<Theme>["MuiCard"];
+export declare const MuiCardHeader: Components<Theme>["MuiCardHeader"];
+export declare const MuiCardContent: Components<Theme>["MuiCardContent"];
+export declare const MuiCardActions: Components<Theme>["MuiCardActions"];
+export declare const MuiPaper: Components<Theme>["MuiPaper"];
+export declare const MuiDialog: Components<Theme>["MuiDialog"];
+export declare const MuiBackdrop: Components<Theme>["MuiBackdrop"];
+export declare const MuiMenu: Components<Theme>["MuiMenu"];
+export declare const MuiMenuItem: Components<Theme>["MuiMenuItem"];
+export declare const MuiTabs: Components<Theme>["MuiTabs"];
+export declare const MuiTab: Components<Theme>["MuiTab"];
+export declare const MuiTableContainer: Components<Theme>["MuiTableContainer"];
+export declare const MuiTableCell: Components<Theme>["MuiTableCell"];
+export declare const MuiTableRow: Components<Theme>["MuiTableRow"];
